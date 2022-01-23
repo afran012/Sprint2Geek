@@ -1,0 +1,92 @@
+{
+    "guajolotas": [
+        {
+            "id": 1,
+            "product": "Guajolota de Tamal Verde",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700044/guappjolotas/verde_dcimlm.png",
+            "precio": 25
+        },
+        {
+            "id": 2,
+            "product": "Guajolota de Tamal de Mole",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700044/guappjolotas/Mole_quk0tw.png",
+            "precio": 25
+        },
+        {
+            "id": 3,
+            "product": "Guajolota de Tamal de Guayaba",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/guayaba_buucjt.png",
+            "precio": 25
+        },
+        {
+            "id": 4,
+            "product": "Guajolota de Tamal de Piña",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700044/guappjolotas/pina_zsrbx2.png",
+            "precio": 25
+        },
+        {
+            "id": 5,
+            "product": "Guajolota de Tamal de Pasas",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700044/guappjolotas/pasas_qghffh.png",
+            "precio": 25
+        }
+    ],
+    "bebidas" : [
+        {
+            "id": 1,
+            "product": "Champurrado",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/champurrado_yt5qpt.png",
+            "precio": 12
+        },
+        {
+            "id": 2,
+            "product": "Atole de Arroz con Leche",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/arroz_con_leche_ftsnw1.png",
+            "precio": 12
+        },
+        {
+            "id": 3,
+            "product": "Chocolate Caliente",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/champurrado_yt5qpt.png",
+            "precio": 12
+        },
+        {
+            "id": 4,
+            "product": "Café Negro",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700043/guappjolotas/champurrado_yt5qpt.png",
+            "precio": 12
+        }
+    ],
+    "tamales": [
+        {
+            "id": 1,
+            "product": "Tamal Verde",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/tamal_verde_utozkh.png",
+            "precio": 14
+        },
+        {
+            "id": 1,
+            "product": "Tamal de Mole",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/tamal_mole_f7o62p.png",
+            "precio": 14
+        },
+        {
+            "id": 1,
+            "product": "Tamal de Guayaba",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700044/guappjolotas/tamal_guayaba_dcw7uw.png",
+            "precio": 14
+        },
+        {
+            "id": 1,
+            "product": "Tamal de Piña",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700044/guappjolotas/tamal_pina_fvvfyj.png",
+            "precio": 14
+        },
+        {
+            "id": 1,
+            "product": "Tamal de Pasas",
+            "imagen": "https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/tamal_pasas_uuvso0.png",
+            "precio": 14
+        }
+    ]
+}
