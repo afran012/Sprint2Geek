@@ -40,16 +40,16 @@ export const Navbar = () => {
     return (
         <Head>
             <LogoSection>
-                <Link className="link" to="">
-                    <Logo src="https://res.cloudinary.com/doueu7nt1/image/upload/v1643335936/Proyecto2/logo_uro5hi.png" alt="" />
+                <Link className="link" to="/Main">
+                    <Logo src="https://res.cloudinary.com/doueu7nt1/image/upload/v1643335936/Proyecto2/logo_uro5hi.png" alt="/Main" />
                 </Link>   
             </LogoSection>
 
             <NavB>
                 <NavUl>
                     <NavLi>
-                    <Link className="link" to="/Carrito">
-                        <CartImg src="https://res.cloudinary.com/doueu7nt1/image/upload/v1643341674/Proyecto2/shopping-cart_aotnyy.png" alt="" />
+                    <Link className="link" to="/Main">
+                        <CartImg src="https://res.cloudinary.com/doueu7nt1/image/upload/v1643341674/Proyecto2/shopping-cart_aotnyy.png" alt="/Main" />
                     </Link>
                     </NavLi>
                 </NavUl>

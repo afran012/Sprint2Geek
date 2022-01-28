@@ -16,7 +16,7 @@ export const AppRouter = () => {
             <Router>
             <Navbar/>
                 <Routes>
-                    <Route exact path="/" element={<Main/>}/>
+                    <Route exact path="/Main" element={<Main/>}/>
                     <Route exact path="/Guajolotas" element={<Guajolotas/>}/>
                     <Route exact path="/Bebidas" element={<Bebidas/>}/>
                     <Route exact path="/Tamales" element={<Tamales/>}/>

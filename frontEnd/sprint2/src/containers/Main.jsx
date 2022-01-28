@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { MainSection, SaludoSection } from '../styles/styleds/MainStyled';
 import {NavProd} from '../components/NavProd'
+import ProductosMain from '../components/ProductosMain';
 
 
 const NavProductos = styled.nav `
@@ -26,6 +27,9 @@ const Main = () => {
       
 
     </NavProductos>
+    <ProductosMain>
+      
+    </ProductosMain>
 
 
   </MainSection>);
