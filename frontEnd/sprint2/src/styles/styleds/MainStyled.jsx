@@ -25,6 +25,7 @@ export const SaludoSection = styled.section `
   }
 
   display: grid;
+  margin: 1rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
   grid-template-columns: 100%;
@@ -34,10 +35,10 @@ export const SaludoSection = styled.section `
 
   font-family: 'Inter', sans-serif;
   font-weight: bold;
-  font-size: 16px;
-  text-align: center;
+  font-size: 34px;
+  text-align: left;
   text-justify:auto;
-  @media only screen and (min-width: 360px) {
+  @media only screen and (min-width: 790px) {
     font-size: 50px;
   }
 

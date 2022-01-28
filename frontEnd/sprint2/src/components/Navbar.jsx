@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Head = styled.header`
     height: 88px;
-    background-color: #FEFEFE;
+    //background-color: #FEFEFE;
     display:  flex;
     justify-content: space-between;
     align-items: center;
