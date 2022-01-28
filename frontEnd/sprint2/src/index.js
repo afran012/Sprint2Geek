@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import {AppRouter} from './routers/AppRouter';
 import './styles/css/body.css'
 
+// AppRouter= styled.section` 
+//     width: 100%;
+//     //height: 1626px;
+//     background-color: rgb(230, 230, 230);
+// `
+
 ReactDOM.render(
   <AppRouter />,
   document.getElementById('root')

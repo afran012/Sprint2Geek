@@ -3,9 +3,12 @@ import {BrowserRouter as Router,
     Routes,
     Route} 
     from 'react-router-dom';
-import { Form } from '../components/Form';
-import { List } from '../components/List';
 import { Navbar } from '../components/Navbar';
+import Main from '../containers/Main';
+import Guajolotas from '../containers/Guajolotas';
+import Bebidas from '../containers/Bebidas';
+import Tamales from '../containers/Tamales';
+import Carrito from '../containers/Carrito';
 
 export const AppRouter = () => {
     return (
@@ -13,8 +16,11 @@ export const AppRouter = () => {
             <Router>
             <Navbar/>
                 <Routes>
-                    <Route exact path="/Registro" element={<Form/>}/>
-                    <Route exact path="/Listar" element={<List/>}/>
+                    <Route exact path="/" element={<Main/>}/>
+                    <Route exact path="/Guajolotas" element={<Guajolotas/>}/>
+                    <Route exact path="/Bebidas" element={<Bebidas/>}/>
+                    <Route exact path="/Tamales" element={<Tamales/>}/>
+                    <Route exact path="/Carrito" element={<Carrito/>}/>
                 </Routes>
             </Router>
         </div>
