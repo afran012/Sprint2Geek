@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { Head, NavB, NavUl, NavLi } from '../styles/styleds/NavProdStyled';
 
 
