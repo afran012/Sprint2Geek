@@ -50,12 +50,12 @@ export const NavLi = styled.li `
             }
 
         }
-        button:active{
+        &:active{
             color: #FA4A0C;
             text-decoration: underline;
 
         }
-        Link:active{
+        &:active{
             color: #FA4A0C;
             text-decoration: underline;
 
