@@ -32,6 +32,34 @@ export const NavLi = styled.li `
         &:hover {
             text-decoration: underline;
         }
+        &:active {
+            color: #FA4A0C;
+            text-decoration: underline;
+
+        }
+
+        button{
+            color: #9A9A9D;
+            &:hover {
+            text-decoration: underline;
+            }
+            &:active {
+                color: #FA4A0C;
+                text-decoration: underline;
+
+            }
+
+        }
+        button:active{
+            color: #FA4A0C;
+            text-decoration: underline;
+
+        }
+        Link:active{
+            color: #FA4A0C;
+            text-decoration: underline;
+
+        }
     }
 
 `

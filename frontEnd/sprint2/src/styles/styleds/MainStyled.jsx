@@ -23,14 +23,19 @@ export const SaludoSection = styled.section `
 
     }
   }
+  h1{
+    width:80%;
+    height: 100%;
+    margin: 1rem;
+  }
 
   display: grid;
-  margin: 1rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
   grid-template-columns: 100%;
-  grid-template-columns: 100%;
+  grid-template-rows: 100%;
   width: 100%;
+  overflow: hidden;
   //height: 250px;
 
   font-family: 'Inter', sans-serif;
