@@ -2,6 +2,7 @@ import React from 'react';
 import { Head, NavB, NavUl, NavLi } from '../styles/styleds/NavProdStyled';
 
 const handClick = (sel) =>{
+    
     let btnGuajo = document.querySelectorAll(".navh3")
     btnGuajo.forEach((element)=>{
         element.style.color = '#9A9A9D'
