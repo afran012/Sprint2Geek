@@ -46,7 +46,6 @@ export const Form = () => {
     return (
         <div>
            <form id="formulario" onSubmit={handleSubmit}>
-           <h2>Registro de Productos</h2>
            <hr/>
                <div>
                    <label>Nombre Producto</label>

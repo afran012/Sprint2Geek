@@ -25,3 +25,8 @@ div.header nav a {
 .link:hover{
     color: rgb(179, 206, 177);
 }
+
+.exitimg{
+    height: 80px;
+    color: rgb(119, 119, 119);
+}
