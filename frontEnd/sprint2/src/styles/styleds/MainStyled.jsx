@@ -40,7 +40,7 @@ export const SaludoSection = styled.section `
 
   font-family: 'Inter', sans-serif;
   font-weight: bold;
-  font-size: 34px;
+  font-size: 30px;
   text-align: left;
   text-justify:auto;
   @media only screen and (min-width: 790px) {

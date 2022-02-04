@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
+import '../../styles/css/Nav.css'
 
 const Head = styled.header`
     height: 88px;
@@ -10,7 +11,7 @@ const Head = styled.header`
     align-items: center;
 `
 const Logo = styled.img `
-    width:10%;
+    width:20%;
     
 
 `
@@ -22,6 +23,8 @@ const NavB = styled.nav ``
 
 const NavUl = styled.ul `
     display: flex;
+    justify-content:center;
+    align-items: center;
 
 `
 const NavLi = styled.li `
@@ -30,11 +33,15 @@ const NavLi = styled.li `
 
 `
 const CartImg = styled.img `
-    width:80%;
+    width:100%;
     color: #332927;
 
 `
+const LogoutImg = styled.img `
+    width:100%;
+    color: #332927;
 
+`
 
 export const Navbar = () => {
     return (
@@ -46,10 +53,15 @@ export const Navbar = () => {
             </LogoSection>
 
             <NavB>
-                <NavUl>
+                <NavUl className='navHead'>
                     <NavLi>
                     <Link className="link" to="/Main">
                         <CartImg src="https://res.cloudinary.com/doueu7nt1/image/upload/v1643341674/Proyecto2/shopping-cart_aotnyy.png" alt="/Main" />
+                    </Link>
+                    </NavLi>
+                    <NavLi>
+                    <Link className="exit" to="/">
+                        <LogoutImg className="exitimg" src="https://res.cloudinary.com/doueu7nt1/image/upload/v1643916659/Proyecto2/door-closed-solid_wqxvds.svg" alt="/Main" />
                     </Link>
                     </NavLi>
                 </NavUl>

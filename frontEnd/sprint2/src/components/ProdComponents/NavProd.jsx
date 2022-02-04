@@ -1,5 +1,5 @@
 import React from 'react';
-import { Head, NavB, NavUl, NavLi } from '../styles/styleds/NavProdStyled';
+import { Head, NavB, NavUl, NavLi } from '../../styles/styleds/NavProdStyled';
 
 const handClick = (sel) =>{
     

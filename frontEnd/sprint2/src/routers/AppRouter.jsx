@@ -4,7 +4,7 @@ import {BrowserRouter as Router,
     Navigate,
     Route} 
     from 'react-router-dom';
-import { Navbar } from '../components/Navbar';
+import { Navbar } from '../components/main/Navbar';
 import Main from '../containers/Main';
 import Guajolotas from '../containers/Guajolotas';
 import Bebidas from '../containers/Bebidas';
