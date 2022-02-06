@@ -31,11 +31,9 @@ const SearchForm = () => {
     return(
         <div>
         <form id="formulario" onSubmit={handleSubmit}>
-        <h2>Registro de Productos</h2>
         <hr/>
             <div>
-                <label>Nombre Producto</label>
-                <input id="inputNombre" name="product" value={product} onChange={handleChanged}/>
+                <input id="inputNombre" autoComplete="off" placeholder="Busca GIFOS y más" name="product" value={product} onChange={handleChanged}/>
             </div>
             <div>
                 <button onClick={() => postData()} id="btnRegistro">Enviar</button> 

@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Guajolotas = () => {
-  return <div></div>;
+  return (
+    <></>
+  );
 };
 
 export default Guajolotas;

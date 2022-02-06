@@ -15,6 +15,7 @@ export const AppRouter = () => {
     return (
         <div>
             <Router>
+            <Carrito/>
             <Navbar/>
                 <Routes>
                     <Route exact path="/" element={<Main/>}/>
