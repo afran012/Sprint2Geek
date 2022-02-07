@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { MainSection, SaludoSection } from '../styles/styleds/MainStyled';
 import {NavProd} from '../components/ProdComponents/NavProd'
 import ProductosMain from '../components/ProdComponents/ProductosMain';
-import SearchForm from '../components/search/SearchForm';
+import Search from './Search';
 
 const NavProductos = styled.nav `
 
@@ -17,7 +17,7 @@ const Main = () => {
       Nada como una Guajolota para empezar el día
       </h1>
     </SaludoSection>
-    <SearchForm/>
+    <Search/>
     <NavProductos>
       <NavProd>
       </NavProd>
