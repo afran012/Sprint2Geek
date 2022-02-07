@@ -1,8 +1,18 @@
 import React from 'react';
+import ProductCard from './ProductCard';
 
-const ProductosMain = () => {
-  return <div>Productos mian
-  </div>;
+const ProductosMain = ({products}) => {
+  return (
+    <>
+      {
+        products.map(prod => (
+            <ProductCard key={prod.id}
+                {...prod} />
+        ))
+      }
+    </>
+
+  );
 };
 
 export default ProductosMain;

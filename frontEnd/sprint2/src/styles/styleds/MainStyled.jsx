@@ -15,6 +15,20 @@ export const rotate = keyframes`
   }
 `;
 
+
+
+
+
+export const SearchSection = styled.section `
+
+  /* &:active {
+    animation: ${rotate} 1s linear infinite;
+  } */
+
+`
+
+
+
 export const SaludoSection = styled.section `
 
   &:hover {

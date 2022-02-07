@@ -33,7 +33,7 @@ const SearchForm = () => {
         <form id="formulario" onSubmit={handleSubmit}>
         <hr/>
             <div>
-                <input id="inputNombre" autoComplete="off" placeholder="Busca GIFOS y más" name="product" value={product} onChange={handleChanged}/>
+                <input id="inputNombre" autoComplete="off" placeholder="Busca Tu Guajolota Favorita" name="product" value={product} onChange={handleChanged}/>
             </div>
             <div>
                 <button onClick={() => postData()} id="btnRegistro">Enviar</button> 
