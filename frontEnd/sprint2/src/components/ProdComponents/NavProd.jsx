@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { NavProdContext } from '../../context/NavProdContext';
 import { Head, NavB, NavUl, NavLi } from '../../styles/styleds/NavProdStyled';
 
@@ -18,12 +18,16 @@ const handClick = (sel) =>{
 
 
 export const NavProd = () => {
+    useEffect(() => {
+        let btnGuajo = document.querySelector(".NavGuajo")
+        btnGuajo.style.color = '#FA4A0C'
+        btnGuajo.style.textDecoration= "underline";
+        ;
+    }, []);
+    
 
-    const { NavProducto , setNavProducto} = useContext(NavProdContext);
 
-
-
-
+    const { setNavProducto} = useContext(NavProdContext);
 
     return (
         <Head>

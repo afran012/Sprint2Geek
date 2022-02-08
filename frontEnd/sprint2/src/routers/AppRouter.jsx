@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React /*, { useState }*/ from 'react'
 import {BrowserRouter as Router, 
     Routes,
     Navigate,
@@ -10,6 +10,7 @@ import Guajolotas from '../containers/Guajolotas';
 import Bebidas from '../containers/Bebidas';
 import Tamales from '../containers/Tamales';
 import Carrito from '../containers/Carrito';
+import AddProducts from '../containers/AddProducts';
 
 export const AppRouter = () => {
     return (
@@ -19,6 +20,7 @@ export const AppRouter = () => {
             <Navbar/>
                 <Routes>
                     <Route exact path="/" element={<Main/>}/>
+                    <Route exact path="/add" element={<AddProducts/>}/>
                     <Route exact path="/Guajolotas" element={<Guajolotas/>}/>
                     <Route exact path="/Bebidas" element={<Bebidas/>}/>
                     <Route exact path="/Tamales" element={<Tamales/>}/>

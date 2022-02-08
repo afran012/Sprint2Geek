@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useCallback, useContext, useEffect } from 'react';
 import {NavProdContext} from '../../context/NavProdContext';
 import ProductsContext from '../../context/ProductsContext';
 import ProductCard from './ProductCard';
@@ -8,7 +8,8 @@ const ProductosMain = () => {
   const {Productos/*, setProductos*/} = useContext(ProductsContext)
   const { NavProducto /*, setNavProducto*/} = useContext(NavProdContext);
 
-  const checkNavProduct = ()=> {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const checkNavProduct = useCallback(()=> {
     //console.log("entro")
     if (NavProducto.selectProd==="guajolotas") {
       return Productos.guajolotas 
@@ -19,11 +20,13 @@ const ProductosMain = () => {
     if (NavProducto.selectProd==="tamales") {
       return Productos.tamales 
     }
-  }
+  })
+
+  let { selectProd } = NavProducto
 
   useEffect(() => {
     checkNavProduct()   
-  }, [Productos,NavProducto]);
+  }, [checkNavProduct, selectProd]);
   
   return (
     <>

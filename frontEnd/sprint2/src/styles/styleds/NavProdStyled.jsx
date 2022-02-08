@@ -29,6 +29,11 @@ export const NavLi = styled.li `
         @media only screen and (min-width: 790px) {
             font-size: 50px;
         }
+        &:focus {
+            color: #FA4A0C;
+            text-decoration: underline;
+
+        }
         &:hover {
             text-decoration: underline;
         }

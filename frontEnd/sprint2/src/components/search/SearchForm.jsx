@@ -8,7 +8,7 @@ const SearchForm = () => {
         precio: ''
     })
 
-    const { product , imagen , precio} = producto;
+    const { product /*, imagen , precio*/} = producto;
 
     const postData = () => {
 
