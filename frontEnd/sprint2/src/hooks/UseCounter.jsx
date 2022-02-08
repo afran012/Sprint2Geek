@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
-const useCounter = (value) => {
-    //console.log(value);
+const useCounter = (num) => {
 
-    const [counter, setCounter] = useState(value)
+    const [counter, setCounter] = useState({
+        value:num
+    })
 
     const handleSumar = () => {
-        //console.log(counter);
         setCounter(counter + 1)
     }
 

@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React, { /*useContext,*/ useEffect, useState } from 'react';
 import styled from 'styled-components';
-import ProductsContext from '../../context/ProductsContext';
-import useCounter from '../../hooks/UseCounter';
+//import ProductsContext from '../../context/ProductsContext';
+//import useCounter from '../../hooks/UseCounter';
 import '../../styles/css/Carrousel.css'
 
 const CarrouselContainer = styled.section `
@@ -29,24 +29,51 @@ const CarrouselContainer = styled.section `
     }
 `
 
-const Carrousel = ({index = 1}) => {
-    //let numero = 0
-    const { counter, handleSumar } = useCounter(index);
-    const {Productos/*, setProductos*/} = useContext(ProductsContext)
+const Carrousel = ({index = 3}) => {
 
-    const handlePosition = (position=0) =>{
+  
+    const [Count, setCount] = useState({value:index});
+    //const {Productos/*, setProductos*/} = useContext(ProductsContext)
+
+   // console.log(Productos.guajolotas[0].imagen);
+
+    
+    /*const [ImgPositions, setImgPositions] = useState({
+        img0:0,
+        img1:0,
+        img2:0
+    });*/
+
+    const handlePosition = () =>{
+        console.log(Count.value);
 
     }
+
     const handleLeft = ()=>{
-        handleSumar()
-        console.log(counter)
+        console.log(Count.value);
+        if (Count.value>0) {            
+            setCount({value:Count.value-1})
+            handlePosition()
+        } 
+    }
 
-        
-    }
     const handleRight = ()=>{
-        console.log("right");
-        
+        if (Count.value<7) {
+            setCount({value:Count.value+1})
+            console.log(Count.value)            
+        } else {
+            console.log("right");
+        }                 
     }
+
+    useEffect(() => {
+        console.log(Count.value);
+    
+      return () => {
+        console.log("dismountCarusel");
+      };
+    }, [Count]);
+    
 
   return (
     <CarrouselContainer className='CarrouselContainer'>

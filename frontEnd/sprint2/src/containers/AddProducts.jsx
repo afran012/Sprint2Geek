@@ -3,6 +3,7 @@ import Carrousel from '../components/addProd/Carrousel';
 
 
 const AddProducts = () => {
+    
   return (
       <>
       <Carrousel></Carrousel>

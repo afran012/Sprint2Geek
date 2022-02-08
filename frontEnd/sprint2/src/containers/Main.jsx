@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {/* useEffect,*/ useState } from 'react';
 import styled from 'styled-components';
 
 import { MainSection, SaludoSection, SearchSection } from '../styles/styleds/MainStyled';
@@ -6,9 +6,9 @@ import {NavProd} from '../components/ProdComponents/NavProd'
 import ProductosMain from '../components/ProdComponents/ProductosMain';
 import Search from './Search';
 import "../styles/css/search.css"
-import { getData } from '../helpers/getData';
-import ProductsContext from '../context/ProductsContext';
-import { url } from '../helpers/url';
+//import { getData } from '../helpers/getData';
+//import ProductsContext from '../context/ProductsContext';
+//import { url } from '../helpers/url';
 import {NavProdContext} from '../context/NavProdContext';
 //import SearchContext from '../context/SearchContext'
 
@@ -19,23 +19,9 @@ const NavProductos = styled.nav `
 
 const Main = () => {
 
-  const [Productos, setProductos] = useState({
-    bebidas : [],
-    guajolotas: [],
-    tamales: [],
-});
 
-const traerDatos = async () => {
-  const datos = await getData(`${url}Productos`);
-  setProductos(datos);
-  // return datos;
-};
 
-useEffect(() => {
-  traerDatos()
-  //setNavProducto(bebidas)
-  
-}, []);
+
 
 //let {bebidas , guajolotas , tamales} = Productos
 
@@ -73,7 +59,7 @@ const [NavProducto, setNavProducto] = useState({
   };
 
   return (
-  <ProductsContext.Provider value={{ Productos, setProductos }} >
+  
     <MainSection>
       <SaludoSection>
         <h1>
@@ -92,7 +78,7 @@ const [NavProducto, setNavProducto] = useState({
       </ProductosMain>
       </NavProdContext.Provider>
     </MainSection>
-  </ProductsContext.Provider>
+  
  );
 }
 
