@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 
 const ProductCardDiv = styled.section `
@@ -6,9 +6,6 @@ const ProductCardDiv = styled.section `
 
     background-color: #FFFFFF;
     border-radius: 20px;
-    //border-width: 1px;
-    // border-style: solid;
-    // border-color: black;
     width: 90%;
     height: 112px;
     display: grid; 
@@ -19,19 +16,16 @@ const ProductCardDiv = styled.section `
 
     img{
         //width: 100%;
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 70%;
+        max-height: 90%;
         border-radius: 20px;
+        align-self: center;
+        justify-self: center;
     }
 
 `
 
-const ProductCard = ({
-    id,
-    product,
-    imagen,
-    precio
-}) => {
+const ProductCard = memo(({id,product,imagen,precio}) => {
 
 
   return (<ProductCardDiv key={id}>
@@ -43,6 +37,6 @@ const ProductCard = ({
     
 
     </ProductCardDiv>);
-};
+});
 
 export default ProductCard;

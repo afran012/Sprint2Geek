@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { MainSection, SaludoSection, SearchSection } from '../styles/styleds/MainStyled';
@@ -9,6 +9,7 @@ import "../styles/css/search.css"
 import { getData } from '../helpers/getData';
 import ProductsContext from '../context/ProductsContext';
 import { url } from '../helpers/url';
+import {NavProdContext} from '../context/NavProdContext';
 //import SearchContext from '../context/SearchContext'
 
 const NavProductos = styled.nav `
@@ -24,7 +25,6 @@ const Main = () => {
     tamales: [],
 });
 
-
 const traerDatos = async () => {
   const datos = await getData(`${url}Productos`);
   setProductos(datos);
@@ -33,12 +33,17 @@ const traerDatos = async () => {
 
 useEffect(() => {
   traerDatos()
+  //setNavProducto(bebidas)
   
 }, []);
 
-let {bebidas , guajolotas , tamales} = Productos
+//let {bebidas , guajolotas , tamales} = Productos
 
 
+const [NavProducto, setNavProducto] = useState({
+  selectProd: "guajolotas",
+  containProd: []
+});
 
   
   const [SearchState, setSearchState] = useState({
@@ -47,22 +52,16 @@ let {bebidas , guajolotas , tamales} = Productos
   
   const searchActive = ()=>{
     
-    if (SearchState.active){
+
       setSearchState({
-        active: false
+        active: !SearchState.active
     })
-    }
-    else {
-      setSearchState({
-        active: true
-    })
-    }
     console.log(SearchState.active);
   }
-  //console.log(SearchState);
 
 
-  const {active} = SearchState
+
+  //const {active} = SearchState
 
   const mystyle1 = {
     color: "white",
@@ -81,15 +80,17 @@ let {bebidas , guajolotas , tamales} = Productos
         Nada como una Guajolota para empezar el día
         </h1>
       </SaludoSection>
-      <SearchSection style={active ? mystyle1 : {} } onClick={searchActive}>
+      <SearchSection style={SearchState.active ? mystyle1 : {} } onClick={searchActive}>
       <Search/>
-      </SearchSection>    
+      </SearchSection>
+      <NavProdContext.Provider value={{ NavProducto, setNavProducto }}>   
       <NavProductos>
         <NavProd>
         </NavProd>
       </NavProductos>
-      <ProductosMain products = {bebidas}>
+      <ProductosMain>
       </ProductosMain>
+      </NavProdContext.Provider>
     </MainSection>
   </ProductsContext.Provider>
  );
