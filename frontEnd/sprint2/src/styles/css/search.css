@@ -1,0 +1,28 @@
+.search-section{
+    animation-duration: 3s;
+    /* animation-name: slidetop; */
+    
+}
+
+.search-section:hover {
+
+    animation-duration: 3s;
+    animation-name: slidetop;
+
+}
+
+
+
+
+@keyframes slidetop {
+from {
+
+    
+}
+
+to {
+    position: sticky;
+    top: 15%;
+    z-index: 2;
+}
+}

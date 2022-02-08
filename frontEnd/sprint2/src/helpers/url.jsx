@@ -1,3 +1,1 @@
-
-
-export const url = "https://challengeclass.herokuapp.com/guajolotas/";
+export const url = "https://guajolotasprint2.herokuapp.com/";
