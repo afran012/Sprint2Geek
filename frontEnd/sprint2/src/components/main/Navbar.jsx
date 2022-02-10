@@ -1,16 +1,20 @@
-import React /*, { useState }*/ from 'react';
+import React, { useContext } /*, { useState }*/ from 'react';
 import { Link } from "react-router-dom";
+import CartContext from '../../context/CartContext';
 import '../../styles/css/Nav.css'
 import { CartImg, Logo, LogoSection, LogoutImg } from '../../styles/styleds/NavbarStyled';
 import { Head, NavB, NavLi, NavUl } from '../../styles/styleds/NavProdStyled';
 
 
 export const Navbar = () => {
-    /*const [cart, setCart] = useState({
+    const {ActiveCarrito, setActiveCarrito} = useContext(CartContext)
 
-    });*/
-
-
+    const cartActive = ()=>{       
+        setActiveCarrito({
+        active: !ActiveCarrito.active
+        })      
+        //console.log(SearchState.active);
+    }
     return (
         <Head>
             <LogoSection>
@@ -23,7 +27,7 @@ export const Navbar = () => {
                 <NavUl className='navHead'>
                     <NavLi className='cartImg'>
                     <div className="link" >
-                        <CartImg src="https://res.cloudinary.com/doueu7nt1/image/upload/v1643341674/Proyecto2/shopping-cart_aotnyy.png" alt="/" />
+                        <CartImg src="https://res.cloudinary.com/doueu7nt1/image/upload/v1643341674/Proyecto2/shopping-cart_aotnyy.png" alt="/" onClick={cartActive} />
                     </div>
                     </NavLi>
                     <NavLi>

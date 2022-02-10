@@ -43,7 +43,7 @@ const [NavProducto, setNavProducto] = useState({
         active: !SearchState.active
       })      
     }
-    console.log(SearchState.active);
+    //console.log(SearchState.active);
   }
 
 

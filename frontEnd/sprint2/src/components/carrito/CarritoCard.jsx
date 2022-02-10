@@ -55,7 +55,7 @@ p{
 
 `
 
-const ProductCard = memo(({id,product,imagen,precio}) => {
+const CarritoCard = memo(({id,product,imagen,precio}) => {
 
     const {ActiveCarrito, setActiveCarrito} = useContext(CartContext)
 
@@ -107,7 +107,7 @@ const ProductCard = memo(({id,product,imagen,precio}) => {
     
 
 
-  return (<ProductCardDiv key={id}>
+  return (<ProductCardDiv>
     <img src={imagen} alt="..."/>
     <section  className='descriptionP'>
         <p className='nameP'>{product}</p>
@@ -117,4 +117,4 @@ const ProductCard = memo(({id,product,imagen,precio}) => {
     </ProductCardDiv>);
 });
 
-export default ProductCard;
+export default CarritoCard
