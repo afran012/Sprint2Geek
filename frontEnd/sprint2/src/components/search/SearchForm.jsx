@@ -88,8 +88,9 @@ const SearchForm = () => {
             <SearchResultsContainer  style={SearchState.active ? mystyle : {} }>
             
             <>
-        
-                    
+
+            <h1 className='tittleSearch'>Guajolotas</h1>
+                           
             {
                 ProdGuajoFiltered.map(prod => (
                     <ProdSearchCard key={prod.id}
