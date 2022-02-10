@@ -1,12 +1,14 @@
 .CarrouselContainer{
     /*grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 100%;*/
+    grid-template-rows: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
 }
 
 .carrouselImg1 {
-    grid-area: 1/1/2/2;     
+    grid-area: 1/1/2/2;
+    align-self: center;
+    justify-self: center;
 }
 .carrouselImg2 {
     grid-area: 1/2/2/3;  

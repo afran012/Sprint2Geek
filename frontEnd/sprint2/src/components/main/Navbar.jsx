@@ -21,7 +21,7 @@ export const Navbar = () => {
 
             <NavB>
                 <NavUl className='navHead'>
-                    <NavLi>
+                    <NavLi className='cartImg'>
                     <div className="link" >
                         <CartImg src="https://res.cloudinary.com/doueu7nt1/image/upload/v1643341674/Proyecto2/shopping-cart_aotnyy.png" alt="/" />
                     </div>
