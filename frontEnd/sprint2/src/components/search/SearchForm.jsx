@@ -4,9 +4,11 @@ import querystring from 'query-string';
 import { useForm } from '../../hooks/useForm';
 import { getProductsByName } from '../../selector/GetProductsByName';
 import ProductsContext from '../../context/ProductsContext';
-import ProductCard from '../ProdComponents/ProductCard';
 import styled from 'styled-components';
 import SearchContext from '../../context/SearchContext';
+import '../../styles/css/search.css'
+import ProdSearchCard from './ProdSearchCard';
+
 
 const SearchResultsContainer = styled.section `
     display : none;
@@ -17,10 +19,31 @@ const mystyle = {
     display: "inline"
   };
 
+const closeStyle2 = {
+display: "none"
+};
+
+const closeStyle1 = {
+display: "inline"
+};
+
+
+
+
 const SearchForm = () => {
-    const {SearchState/*, setSearchState*/} = useContext(SearchContext)
+    const {SearchState, setSearchState} = useContext(SearchContext)
 
     const {Productos/*, setProductos*/} = useContext(ProductsContext)
+
+
+    const changeState = ()=>{
+
+        setSearchState({
+            active:false
+          })
+
+    }
+
 
     const location = useLocation();
     const { q = '' } = querystring.parse(location.search);
@@ -46,48 +69,53 @@ const SearchForm = () => {
     }
 
     return(
-        <div>
-        <form className='formContainer' id="formulario" onSubmit={handleSearch}>
-            <div>
-                <input 
-                className='inputForm'
-                type="text" 
-                autoComplete="off" 
-                placeholder="Busca Tu Guajolota Favorita" 
-                name="searchText" 
-                value={searchText}
-                onChange={handleInputChange}/>
-            </div>
-            <div className='btnForm'>
-                <button type='submit' id="btnRegistro">Enviar</button> 
-            </div>
-        </form>
+        <div className='searchSection' >
+            <form className='formContainer' id="formulario" onSubmit={handleSearch}>
+                <div className='formIn'>
+                    <input 
+                    className='inputForm'   
+                    type="text" 
+                    autoComplete="off" 
+                    placeholder="Sabor de Guajolota" 
+                    name="searchText" 
+                    value={searchText}
+                    onChange={handleInputChange}/>
+                </div>
+            </form>
 
-        <SearchResultsContainer  style={SearchState.active ? mystyle : {} }>
-        <>        {
-            ProdGuajoFiltered.map(prod => (
-                <ProductCard key={prod.id}
-                    {...prod} />
-            ))
-            }
-        </>
-        <>        {
-            ProdTamalFiltered.map(prod => (
-                <ProductCard key={prod.id}
-                    {...prod} />
-            ))
-            }
-        </>
-        <>        {
-            ProdBebidaFiltered.map(prod => (
-                <ProductCard key={prod.id}
-                    {...prod} />
-            ))
-            }
-        </>
+            <p className='pCerrar' style={SearchState.active ? closeStyle1 : closeStyle2 } onClick={changeState}>Cerrar</p>
+
+            <SearchResultsContainer  style={SearchState.active ? mystyle : {} }>
+            
+            <>
         
-        </SearchResultsContainer>
-       
+                    
+            {
+                ProdGuajoFiltered.map(prod => (
+                    <ProdSearchCard key={prod.id}
+                        {...prod} />
+                ))
+                }
+            </>
+            <h1 className='tittleSearch'>Tamales</h1>
+            <>        {
+                ProdTamalFiltered.map(prod => (
+                    <ProdSearchCard key={prod.id}
+                        {...prod} />
+                ))
+                }
+            </>
+            <h1 className='tittleSearch'>Bebidas</h1>
+            <>        {
+                ProdBebidaFiltered.map(prod => (
+                    <ProdSearchCard key={prod.id}
+                        {...prod} />
+                ))
+                }
+            </>
+            
+            </SearchResultsContainer>
+        
         </div>
         );
 };

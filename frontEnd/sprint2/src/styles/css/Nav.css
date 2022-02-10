@@ -29,4 +29,17 @@ div.header nav a {
 .exitimg{
     height: 80px;
     color: rgb(119, 119, 119);
+    justify-self: center;
+    align-self: center;
+}
+
+.cartImg{
+    /*background-color: black;*/
+    display:flex;
+    justify-self: center;
+    align-self: center;
+    justify-content:center;
+    align-items: center;
+    
+
 }
