@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext/*, useState */} from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import querystring from 'query-string';
 import { useForm } from '../../hooks/useForm';
@@ -47,9 +47,10 @@ const SearchForm = () => {
 
     return(
         <div>
-        <form id="formulario" onSubmit={handleSearch}>
+        <form className='formContainer' id="formulario" onSubmit={handleSearch}>
             <div>
                 <input 
+                className='inputForm'
                 type="text" 
                 autoComplete="off" 
                 placeholder="Busca Tu Guajolota Favorita" 
@@ -57,7 +58,7 @@ const SearchForm = () => {
                 value={searchText}
                 onChange={handleInputChange}/>
             </div>
-            <div>
+            <div className='btnForm'>
                 <button type='submit' id="btnRegistro">Enviar</button> 
             </div>
         </form>
