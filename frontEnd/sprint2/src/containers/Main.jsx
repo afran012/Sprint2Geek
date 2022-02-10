@@ -10,6 +10,7 @@ import "../styles/css/search.css"
 //import ProductsContext from '../context/ProductsContext';
 //import { url } from '../helpers/url';
 import {NavProdContext} from '../context/NavProdContext';
+import SearchContext from '../context/SearchContext';
 //import SearchContext from '../context/SearchContext'
 
 const NavProductos = styled.nav `
@@ -37,11 +38,11 @@ const [NavProducto, setNavProducto] = useState({
   });
   
   const searchActive = ()=>{
-    
-
+    if (SearchState.active===false) {
       setSearchState({
         active: !SearchState.active
-    })
+      })      
+    }
     console.log(SearchState.active);
   }
 
@@ -51,11 +52,13 @@ const [NavProducto, setNavProducto] = useState({
 
   const mystyle1 = {
     color: "white",
-    backgroundColor: "DodgerBlue",
+    backgroundColor: "#F2F2F2",
     padding: "10px",
     fontFamily: "Arial",
     position: "absolute",
-    top: "1%"
+    top: "1%",
+    //height: "100%",
+    width: "100vh",
   };
 
   return (
@@ -66,9 +69,11 @@ const [NavProducto, setNavProducto] = useState({
         Nada como una Guajolota para empezar el día
         </h1>
       </SaludoSection>
+      <SearchContext.Provider value={{SearchState, setSearchState}}>
       <SearchSection style={SearchState.active ? mystyle1 : {} } onClick={searchActive}>
       <Search/>
       </SearchSection>
+      </SearchContext.Provider>
       <NavProdContext.Provider value={{ NavProducto, setNavProducto }}>   
       <NavProductos>
         <NavProd>

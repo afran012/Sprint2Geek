@@ -3,26 +3,25 @@
     /* animation-name: slidetop; */
     
 }
-
 .search-section:hover {
 
     animation-duration: 3s;
     animation-name: slidetop;
 
 }
-
-
-
-
 @keyframes slidetop {
-from {
-
-    
+from {    
 }
 
 to {
     position: sticky;
     top: 15%;
     z-index: 2;
+}}
+
+.SearchResultsContent{
+    background-color: #F2F2F2;
+    height: 100%;
+    width: 100%;
 }
-}
+

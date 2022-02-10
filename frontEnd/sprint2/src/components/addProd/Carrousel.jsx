@@ -18,6 +18,7 @@ const Carrousel = ({index = 3}) => {
       <>
         <>{Count.value }</>
         <CarrouselImg></CarrouselImg>
+        
 
       </>
 

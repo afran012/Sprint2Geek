@@ -9,7 +9,7 @@ const ProductCardDiv = styled.section `
     width: 90%;
     height: 112px;
     display: grid; 
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 30% 50% 20%;
     grid-template-rows: 100% ;
     align-self: center;
     justify-self: center;
@@ -23,6 +23,20 @@ const ProductCardDiv = styled.section `
         justify-self: center;
     }
 
+    p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.4;
+        
+    }
+    .nameP{
+        color: #0D0D0D;
+    }
+    .priceP{
+        color: #FA4A0C;
+    }
+
 `
 
 const ProductCard = memo(({id,product,imagen,precio}) => {
@@ -31,11 +45,9 @@ const ProductCard = memo(({id,product,imagen,precio}) => {
   return (<ProductCardDiv key={id}>
     <img src={imagen} alt="..."/>
     <section>
-        <p>{product}</p>
-        <p>{precio}</p>
+        <p className='nameP'>{product}</p>
+        <p className='priceP'>{precio}</p>
     </section>
-    
-
     </ProductCardDiv>);
 });
 
