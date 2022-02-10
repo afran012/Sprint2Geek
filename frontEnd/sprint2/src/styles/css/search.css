@@ -45,6 +45,7 @@ to {
 }
 
 .formContainer{
+    width: 90%;
     background-color: #E7E7E7;
     border-radius: 25px;
 
